@@ -42,6 +42,10 @@ function drawBoxes(detections) {
       circle(x, y, rectWidth);
     }
   }
+
+  if (detections.length < 0){
+    return detections;
+  }
 }
 
 
