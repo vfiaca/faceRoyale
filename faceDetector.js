@@ -1,4 +1,5 @@
 //////reference : https://www.youtube.com/watch?v=3yqANLRWGLo - Kazuki Umeda
+////// Please refer to mainGame.js for the full code 
 
 
 //// A. Declaring global variables
