@@ -562,6 +562,7 @@ function exitStage() {
 }
 
 //function that displays the screen where the loops are over and the camera becomes out of use
+//different files with different loops are created leveraging this function. All files contain 9 rounds in total; but every file has a specific number of 'successful rounds' and the remaining rounds are replaced with this function in order to turn the camera out of use, eventually resulting in the elimination of the player
 function outOfUse() {
   background(17, 17, 17);
   imageMode(CENTER);
