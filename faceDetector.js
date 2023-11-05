@@ -1,5 +1,15 @@
-let faceapi;
-let detections = [];
+//////reference : https://www.youtube.com/watch?v=3yqANLRWGLo - Kazuki Umeda
+
+
+//// A. Declaring global variables
+
+let faceapi; //variable to store face detection result
+let detections = []; //variable to store individual faces that are detected
+
+
+////B. Declaring a constant
+
+//constant that includes various parameters that are used to describe the facial information detected
 
 const faceOptions = {
   withLandmarks: true,
@@ -9,9 +19,15 @@ const faceOptions = {
 };
 
 
+//// D. Defining required functions
+
+//function that detects all the faces that are recognized
+
 function faceReady() {
   faceapi.detect(gotFaces);
 }
+
+//function that detects if a face is recognized or not
 
 function gotFaces(error, result) {
   if (error) {
@@ -24,8 +40,7 @@ function gotFaces(error, result) {
   faceapi.detect(gotFaces);
 }
 
-
-
+//function that draws a rectangle over the face detected to give a visual feedback (this functions is not called in the final code)
 
 function drawBoxes(detections) {
   if (detections.length > 0) {
